@@ -68,6 +68,13 @@ def delete_department():
 # You'll implement the employee functions in the lab
 
 def list_employees():
+    """Fetch and display all employees from the database."""
+    employees = Employee.get_all() #to retrieve employees from database
+    if employees:
+        for emp in employees: #loops through each employee
+            print(emp)
+    else: 
+        print("No employees found.")
     pass
 
 
